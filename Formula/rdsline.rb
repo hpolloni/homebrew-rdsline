@@ -59,5 +59,4 @@ class Rdsline < Formula
   test do
     system bin/"rdsline", "--help"
   end
-
 end
