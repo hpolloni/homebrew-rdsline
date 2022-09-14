@@ -1,20 +1,12 @@
 class Rdsline < Formula
   include Language::Python::Virtualenv
-  desc "A REPL for RDS Data API"
+  desc "REPL for RDS Data API"
   homepage "https://github.com/hpolloni/rdsline"
   url "https://files.pythonhosted.org/packages/fd/21/e2d4a5a4bd77f96d827b0976552ff3be8b7eff0de0f0377c255ca21e9ea1/rdsline-0.4.4.tar.gz"
-  version "0.4.4"
   sha256 "a737a6e06883ffb05bf4fba5c44a4cad2a0de5b6db27d5ecdb6212df406aa3c3"
 
   depends_on "python@3.8"
 
-  def install
-    virtualenv_install_with_resources
-  end
-
-  test do
-    system bin/"rdsline", "--help"
-  end
   resource "boto3" do
     url "https://files.pythonhosted.org/packages/3e/77/716a16c5173e34aeaadc2c89f386140087ec199dcfb2b26250640bd70d04/boto3-1.24.72.tar.gz"
     sha256 "2e502227bfb67fe83b6d61ef9dacd49297bcb631d005cf27b5e54f65064c6e6d"
@@ -40,11 +32,6 @@ class Rdsline < Formula
     sha256 "68fb519c14306fec9720a2a5b45bc9f0c8d1b9c72adf45c37baedfcd949c35a2"
   end
 
-  resource "rdsline" do
-    url "https://files.pythonhosted.org/packages/fd/21/e2d4a5a4bd77f96d827b0976552ff3be8b7eff0de0f0377c255ca21e9ea1/rdsline-0.4.4.tar.gz"
-    sha256 "a737a6e06883ffb05bf4fba5c44a4cad2a0de5b6db27d5ecdb6212df406aa3c3"
-  end
-
   resource "s3transfer" do
     url "https://files.pythonhosted.org/packages/e1/eb/e57c93d5cd5edf8c1d124c831ef916601540db70acd96fa21fe60cef1365/s3transfer-0.6.0.tar.gz"
     sha256 "2ed07d3866f523cc561bf4a00fc5535827981b117dd7876f036b0c1aca42c947"
@@ -64,4 +51,13 @@ class Rdsline < Formula
     url "https://files.pythonhosted.org/packages/b2/56/d87d6d3c4121c0bcec116919350ca05dc3afd2eeb7dc88d07e8083f8ea94/urllib3-1.26.12.tar.gz"
     sha256 "3fa96cf423e6987997fc326ae8df396db2a8b7c667747d47ddd8ecba91f4a74e"
   end
+
+  def install
+    virtualenv_install_with_resources
+  end
+
+  test do
+    system bin/"rdsline", "--help"
+  end
+
 end
