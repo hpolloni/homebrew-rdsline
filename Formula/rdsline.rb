@@ -5,7 +5,7 @@ class Rdsline < Formula
   url "https://files.pythonhosted.org/packages/d4/b4/58f00301af77dd075c6094d3ff96fb4fabf93476ea314a20b6be070d5f95/rdsline-0.4.5.tar.gz"
   sha256 "0d0cd5ce606fea792ed8ac2db652d5ff1604cf12eaf2bdc6c06e39002255eb84"
 
-  depends_on "python@3.8"
+  depends_on "python@3.x"
   resource "boto3" do
     url "https://files.pythonhosted.org/packages/a4/d5/28947cd78711ead30a109b0d31602e6fd9efa38f1c2b7903af139b898965/boto3-1.24.66.tar.gz"
     sha256 "60003d2b83268a303cf61b78a0b59ebe2abe87e2f21308b55a99f25fd9bca4db"
