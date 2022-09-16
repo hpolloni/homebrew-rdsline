@@ -2,19 +2,18 @@ class Rdsline < Formula
   include Language::Python::Virtualenv
   desc "REPL for RDS Data API"
   homepage "https://github.com/hpolloni/rdsline"
-  url "https://files.pythonhosted.org/packages/fd/21/e2d4a5a4bd77f96d827b0976552ff3be8b7eff0de0f0377c255ca21e9ea1/rdsline-0.4.4.tar.gz"
-  sha256 "a737a6e06883ffb05bf4fba5c44a4cad2a0de5b6db27d5ecdb6212df406aa3c3"
+  url "https://files.pythonhosted.org/packages/d4/b4/58f00301af77dd075c6094d3ff96fb4fabf93476ea314a20b6be070d5f95/rdsline-0.4.5.tar.gz"
+  sha256 "0d0cd5ce606fea792ed8ac2db652d5ff1604cf12eaf2bdc6c06e39002255eb84"
 
   depends_on "python@3.8"
-
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/3e/77/716a16c5173e34aeaadc2c89f386140087ec199dcfb2b26250640bd70d04/boto3-1.24.72.tar.gz"
-    sha256 "2e502227bfb67fe83b6d61ef9dacd49297bcb631d005cf27b5e54f65064c6e6d"
+    url "https://files.pythonhosted.org/packages/a4/d5/28947cd78711ead30a109b0d31602e6fd9efa38f1c2b7903af139b898965/boto3-1.24.66.tar.gz"
+    sha256 "60003d2b83268a303cf61b78a0b59ebe2abe87e2f21308b55a99f25fd9bca4db"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/ab/9c/c790ba19f53e1ea7cfb96ca413012dcfcbbf82af1340e37becf7d2378ce0/botocore-1.27.72.tar.gz"
-    sha256 "6184ab43a59118541b88e0ede24ccd671553323ace95bb7c8de3082a5cc581cb"
+    url "https://files.pythonhosted.org/packages/0d/72/3e94737e6eeb2f760e57fce15498a8d43c4c0939b35ce576310de9a9713a/botocore-1.27.66.tar.gz"
+    sha256 "6c8c8c82b38ba2353bd3bc071019ab44d8a160b9d17f3ab166f0ceaf1ca38c12"
   end
 
   resource "jmespath" do
@@ -38,8 +37,8 @@ class Rdsline < Formula
   end
 
   resource "six" do
-    url "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz"
-    sha256 "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
+    url "https://files.pythonhosted.org/packages/dd/bf/4138e7bfb757de47d1f4b6994648ec67a51efe58fa907c1e11e350cddfca/six-1.12.0.tar.gz"
+    sha256 "d16a0141ec1a18405cd4ce8b4613101da75da0e9a7aec5bdd4fa804d0e0eba73"
   end
 
   resource "tabulate" do
